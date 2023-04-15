@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido de namoro</title>
+  <style>
+    
+    body {
+      background-image: url('https://i.pinimg.com/550x/e9/73/a1/e973a1adcd85be8000b269c72ab7bd60.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      font-size: 48px;
+      margin-top: 20%;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 12px;
+      margin: 20px;
+      border-radius: 8px;
+      border: none;
+      color: white;
+      background-color: #FF69B4;
+      cursor: pointer;
+    }
+    #meuBotao {
+  font-size: 24px;
+  padding: 16px;
+  background-color: pink;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-out;
+}
+
+#meuBotao:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+    button:hover {
+      background-color: #FF1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quer namorar comigo?</h1>
+  
+  <button onclick="alert('Estou muito feliz e grato por ter você ao meu lado. Prometo te amar, cuidar e respeitar todos os dias da minha vida. Mal posso esperar para construir uma história incrível ao seu lado. Você me faz muito feliz')">Sim</button>
+  <button id="meuBotao">não</button>
+
+  
+</body>
+<script>
+  var botao = document.getElementById("meuBotao");
+
+botao.addEventListener("mouseover", function() {
+  var novaPosicaoX = Math.floor(Math.random() * (window.innerWidth - botao.offsetWidth));
+  var novaPosicaoY = Math.floor(Math.random() * (window.innerHeight - botao.offsetHeight));
+  botao.style.left = novaPosicaoX + "px";
+  botao.style.top = novaPosicaoY + "px";
+});
+</script>
+</html>
